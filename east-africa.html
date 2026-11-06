@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>East Africa | Tastes of Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">🌍 Tastes of Africa</a>
+  <nav aria-label="Main navigation"><ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="regions.html" aria-current="page">Regions</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></nav>
+  <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main class="wrap narrow">
+  <p><a href="regions.html">&larr; Back to all regions</a></p>
+  <article class="card pad">
+    <h1>East Africa</h1>
+    <img src="https://loremflickr.com/800/400/ethiopia,food" alt="Ethiopian food spread on injera">
+    <h2>Food culture</h2>
+    <p>East African cuisine mixes highland traditions with Indian Ocean spice-trade influences. Flatbreads, stews, maize porridge and cassava are everyday foods, often shared from a common platter.</p>
+    <h2>Staples &amp; spices</h2>
+    <p><mark>Teff</mark>, maize, cassava and beans, seasoned with <mark>berbere</mark>, cardamom and cloves.</p>
+    <h2>Cooking techniques</h2>
+    <p><mark>Fermenting</mark> batters for injera, simmering slow stews, and grilling meat over charcoal (nyama choma).</p>
+    <h2>Example dishes</h2>
+    <ul>
+      <li><a href="injera.html">Injera with Doro Wat</a> (Ethiopia)</li>
+    </ul>
+    <h2>Video</h2>
+    <div class="video"><iframe class="yt" data-vid="VLDlO2CIMbQ" title="East African cuisine" allowfullscreen loading="lazy"></iframe></div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Tastes of Africa. Celebrating African food heritage.</p>
+  <form id="newsletter-form" class="newsletter">
+    <label for="news-email">Newsletter signup</label>
+    <input type="email" id="news-email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe</button>
+    <p id="news-msg" role="status"></p>
+  </form>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

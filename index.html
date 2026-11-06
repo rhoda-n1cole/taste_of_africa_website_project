@@ -22,34 +22,42 @@
 </header>
 
 <main>
-  <section class="hero">
+     <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__media" aria-hidden="true">
+      <div id="hero-player" data-video-id="VLDlO2CIMbQ"></div>
+    </div>
+    <div class="hero__shade"></div>
     <div class="overlay">
-      <h1>Tastes of Africa</h1>
+      <h1 id="hero-title">Tastes of Africa</h1>
       <p>Explore the <mark>spices</mark>, stories and flavours of a continent on a plate.</p>
       <a class="btn" href="recipes.html">Explore recipes</a>
     </div>
+    <div class="hero__controls" hidden>
+      <button class="hero__control" type="button" id="hero-play">Pause video</button>
+      <button class="hero__control" type="button" id="hero-sound">Turn sound on</button>
+    </div>
   </section>
-
+  
   <section class="wrap">
     <h2>Welcome</h2>
     <p>Watch an introduction to African food culture:</p>
-    <div class="video"><iframe class="yt" title="Introduction to African food culture" allowfullscreen loading="lazy"></iframe></div>
+    <div class="video"><iframe src="https://www.youtube.com/embed/BlEyGP_cQKY" title="Introduction to African food culture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
   </section>
 
   <section class="wrap">
     <h2>Featured Dishes</h2>
     <div class="grid">
       <figure class="card">
-        <a href="recipes.html#jollof"><img src="https://loremflickr.com/600/400/jollof,rice" alt="A plate of smoky Jollof rice"></a>
-        <figcaption><h3>Jollof Rice</h3><p>A <mark>tomato-based</mark> one-pot rice served at celebrations across West Africa.</p><a class="btn" href="recipes.html#jollof">View recipe</a></figcaption>
+        <a href="jollof.html"><img src="https://loremflickr.com/600/400/jollof,rice" alt="A plate of smoky Jollof rice"></a>
+        <figcaption><h3>Jollof Rice</h3><p>A <mark>tomato-based</mark> one-pot rice served at celebrations across West Africa.</p><a class="btn" href="jollof.html">View recipe</a></figcaption>
       </figure>
       <figure class="card">
-        <a href="recipes.html#tagine"><img src="https://loremflickr.com/600/400/tagine,morocco" alt="A Moroccan chicken tagine in a clay pot"></a>
-        <figcaption><h3>Chicken Tagine</h3><p>A slow-cooked Moroccan stew perfumed with <mark>saffron</mark> and preserved lemon.</p><a class="btn" href="recipes.html#tagine">View recipe</a></figcaption>
+        <a href="tagine.html"><img src="https://loremflickr.com/600/400/tagine,morocco" alt="A Moroccan chicken tagine in a clay pot"></a>
+        <figcaption><h3>Chicken Tagine</h3><p>A slow-cooked Moroccan stew perfumed with <mark>saffron</mark> and preserved lemon.</p><a class="btn" href="tagine.html">View recipe</a></figcaption>
       </figure>
       <figure class="card">
-        <a href="recipes.html#injera"><img src="https://loremflickr.com/600/400/injera,ethiopian" alt="Injera flatbread served with Ethiopian stews"></a>
-        <figcaption><h3>Injera with Doro Wat</h3><p>A spongy <mark>teff</mark> flatbread served with a spicy Ethiopian chicken stew.</p><a class="btn" href="recipes.html#injera">View recipe</a></figcaption>
+        <a href="injera.html"><img src="https://loremflickr.com/600/400/injera,ethiopian" alt="Injera flatbread served with Ethiopian stews"></a>
+        <figcaption><h3>Injera with Doro Wat</h3><p>A spongy <mark>teff</mark> flatbread served with a spicy Ethiopian chicken stew.</p><a class="btn" href="injera.html">View recipe</a></figcaption>
       </figure>
     </div>
   </section>
@@ -57,9 +65,9 @@
   <section class="wrap">
     <h2>Explore by Region</h2>
     <ul class="pills">
-      <li><a href="regions.html#west-africa">West Africa</a></li>
-      <li><a href="regions.html#north-africa">North Africa</a></li>
-      <li><a href="regions.html#east-africa">East Africa</a></li>
+      <li><a href="west-africa.html">West Africa</a></li>
+      <li><a href="north-africa.html">North Africa</a></li>
+      <li><a href="east-africa.html">East Africa</a></li>
     </ul>
   </section>
 

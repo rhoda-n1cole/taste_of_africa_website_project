@@ -30,12 +30,25 @@
     <label for="email">Email</label>
     <input type="email" id="email" name="email" required>
 
-    <label for="country">Country</label>
-    <input list="countries" id="country" name="country" placeholder="Start typing...">
-    <datalist id="countries">
-      <option value="Nigeria"><option value="Ghana"><option value="Morocco">
-      <option value="Ethiopia"><option value="Rwanda"><option value="Kenya">
-      <option value="South Africa"><option value="Egypt"><option value="Other">
+        <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="">Choose your country</option>
+      <option>Rwanda</option>
+      <option>Nigeria</option>
+      <option>Ghana</option>
+      <option>Kenya</option>
+      <option>Ethiopia</option>
+      <option>Morocco</option>
+      <option>South Africa</option>
+      <option>Other</option>
+    </select>
+
+    <label for="other-country">Not listed? Type your country</label>
+    <input list="more-countries" id="other-country" name="other-country" placeholder="Start typing...">
+    <datalist id="more-countries">
+      <option value="Egypt"><option value="Tanzania"><option value="Uganda">
+      <option value="Senegal"><option value="Tunisia"><option value="Algeria">
+      <option value="United States"><option value="United Kingdom"><option value="Canada">
     </datalist>
 
     <label for="message">Message (more than 20 characters)</label>

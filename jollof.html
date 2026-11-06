@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jollof Rice | Tastes of Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">🌍 Tastes of Africa</a>
+  <nav aria-label="Main navigation"><ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="recipes.html" aria-current="page">Recipes</a></li>
+    <li><a href="regions.html">Regions</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></nav>
+  <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main class="wrap narrow">
+  <p><a href="recipes.html">&larr; Back to all recipes</a></p>
+  <article class="recipe card pad" data-id="jollof">
+    <h1>Jollof Rice <small>(Nigeria)</small></h1>
+    <button class="fav-btn" type="button" aria-pressed="false">🤍 Favorite</button>
+    <img src="https://loremflickr.com/600/400/jollof,rice" alt="Jollof rice served on a plate">
+    <p>A smoky, tomato-based <mark>one-pot rice</mark> served at weddings and celebrations across Nigeria and Ghana. It comes from the Wolof people of Senegambia, and the question of who makes it best is a famous friendly rivalry across West Africa.</p>
+    <h2>Ingredients</h2>
+    <label>Servings: <input type="number" class="servings" value="4" min="1" max="20"></label>
+    <ul>
+      <li><span class="amt" data-base="2">2</span> cups long-grain rice</li>
+      <li><span class="amt" data-base="4">4</span> tomatoes, blended</li>
+      <li><span class="amt" data-base="1">1</span> red bell pepper</li>
+      <li><span class="amt" data-base="2">2</span> tbsp tomato paste</li>
+      <li><span class="amt" data-base="1">1</span> onion</li>
+      <li><span class="amt" data-base="2">2</span> tsp <mark>thyme and curry powder</mark></li>
+      <li><span class="amt" data-base="3">3</span> cups stock</li>
+    </ul>
+    <details open><summary>Cooking instructions</summary>
+      <ol>
+        <li>Blend tomatoes, pepper and onion; fry with tomato paste until reduced.</li>
+        <li>Add spices and stock, bring to a boil.</li>
+        <li>Stir in washed rice, cover tightly and cook on low heat for 30 minutes.</li>
+        <li>Fluff and serve with fried plantain.</li>
+      </ol>
+    </details>
+    <h2>Video tutorial</h2>
+    <div class="video"><iframe class="yt" title="How to cook Jollof Rice" allowfullscreen loading="lazy"></iframe></div>
+    <h2>Nutrition (per serving)</h2>
+    <table><thead><tr><th>Calories</th><th>Fat</th><th>Carbs</th><th>Protein</th></tr></thead>
+    <tbody><tr><td>420 kcal</td><td>8 g</td><td>78 g</td><td>9 g</td></tr></tbody></table>
+    <h2>Country of origin: Nigeria</h2>
+    <div class="video"><iframe src="https://www.google.com/maps?q=Nigeria&output=embed" title="Map of Nigeria" loading="lazy"></iframe></div>
+    <p>Region: <a href="west-africa.html">West Africa</a></p>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Tastes of Africa. Celebrating African food heritage.</p>
+  <form id="newsletter-form" class="newsletter">
+    <label for="news-email">Newsletter signup</label>
+    <input type="email" id="news-email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe</button>
+    <p id="news-msg" role="status"></p>
+  </form>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

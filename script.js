@@ -1,5 +1,5 @@
 /* ===== Tastes of Africa: script.js ===== */
-// Default video for every embed (your YouTube Short).
+// Default video for every embed that has class "yt".
 const DEFAULT_VIDEO = 'BlEyGP_cQKY';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,16 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---- Dark / light mode (saved in localStorage) ---- */
   const root = document.documentElement;
   const themeBtn = document.getElementById('theme-toggle');
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) root.setAttribute('data-theme', savedTheme);
-  const setIcon = () => themeBtn.textContent = root.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
-  setIcon();
-  themeBtn.addEventListener('click', () => {
-    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
+  if (themeBtn) {
+    let savedTheme = null;
+    try { savedTheme = localStorage.getItem('theme'); } catch (e) {}
+    if (savedTheme) root.setAttribute('data-theme', savedTheme);
+    const setIcon = () => {
+      themeBtn.textContent = root.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+    };
     setIcon();
-  });
+    themeBtn.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      setIcon();
+    });
+  }
 
   /* ---- Recipe filter by region ---- */
   const filterBtns = document.querySelectorAll('.filter-btn');
@@ -45,11 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   recipes.forEach(card => {
     const btn = card.querySelector('.fav-btn');
+    if (!btn) return;
     const id = card.dataset.id;
     paint(btn, favs.includes(id));              // restore saved favorites on load
     btn.addEventListener('click', () => {
       favs = favs.includes(id) ? favs.filter(f => f !== id) : [...favs, id];
-      localStorage.setItem('favorites', JSON.stringify(favs));
+      try { localStorage.setItem('favorites', JSON.stringify(favs)); } catch (e) {}
       paint(btn, favs.includes(id));
     });
   });
@@ -89,9 +95,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---- Newsletter (footer) ---- */
   const news = document.getElementById('newsletter-form');
-  news.addEventListener('submit', e => {
-    e.preventDefault();
-    document.getElementById('news-msg').textContent = 'Thanks for subscribing!';
-    news.reset();
-  });
+  if (news) {
+    news.addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('news-msg').textContent = 'Thanks for subscribing!';
+      news.reset();
+    });
+  }
+
+  /* ---- Hero background video (YouTube player API) ---- */
+  const heroEl = document.getElementById('hero-player');
+  if (heroEl) {
+    const videoId = heroEl.dataset.videoId;
+    const controls = document.querySelector('.hero__controls');
+    const playBtn = document.getElementById('hero-play');
+    const soundBtn = document.getElementById('hero-sound');
+    let player;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(tag);
+
+    window.onYouTubeIframeAPIReady = () => {
+      player = new YT.Player('hero-player', {
+        videoId,
+        playerVars: {
+          autoplay: reduceMotion ? 0 : 1, mute: 1, controls: 0, loop: 1,
+          playlist: videoId, playsinline: 1, rel: 0, modestbranding: 1,
+          disablekb: 1, iv_load_policy: 3
+        },
+        events: {
+          onReady: e => {
+            e.target.mute();
+            if (!reduceMotion) e.target.playVideo();
+            playBtn.textContent = reduceMotion ? 'Play video' : 'Pause video';
+            controls.hidden = false;
+          }
+        }
+      });
+    };
+
+    playBtn.addEventListener('click', () => {
+      if (!player) return;
+      const playing = player.getPlayerState() === YT.PlayerState.PLAYING;
+      playing ? player.pauseVideo() : player.playVideo();
+      playBtn.textContent = playing ? 'Play video' : 'Pause video';
+    });
+
+    soundBtn.addEventListener('click', () => {
+      if (!player) return;
+      if (player.isMuted()) { player.unMute(); player.setVolume(100); soundBtn.textContent = 'Mute sound'; }
+      else { player.mute(); soundBtn.textContent = 'Turn sound on'; }
+    });
+  }
 });
