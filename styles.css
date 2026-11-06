@@ -1,0 +1,66 @@
+/* ===== Tastes of Africa styles ===== */
+:root{--bg:#fff8ec;--card:#fff;--text:#3b2417;--red:#a52a1a;--yellow:#e8a317;--brown:#6b3e26;--shadow:0 4px 14px rgba(59,36,23,.18)}
+[data-theme="dark"]{--bg:#1f1510;--card:#2d1f17;--text:#f6e6d0;--red:#e0553f;--yellow:#f2b632;--brown:#d9a679}
+*{box-sizing:border-box}
+html{font-size:100%}
+body{margin:0;font-family:'Nunito',sans-serif;line-height:1.7;background:var(--bg);color:var(--text)}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.2;color:var(--red)}
+img{max-width:100%;height:auto;border-radius:.5rem}
+a{color:var(--red)}
+.wrap{max-width:70rem;margin:0 auto;padding:2rem 1.25rem}
+.narrow{max-width:46rem}
+
+/* navigation */
+.site-header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.5rem;background:var(--brown);position:sticky;top:0;z-index:10}
+.logo{font-family:'Playfair Display',serif;font-size:1.5rem;color:#fff;text-decoration:none;font-weight:900}
+nav ul{display:flex;flex-wrap:wrap;gap:1rem;list-style:none;margin:0;padding:0}
+nav a{color:#fff;text-decoration:none;padding:.3rem .6rem;border-bottom:2px solid transparent;transition:.2s}
+nav a:hover,nav a[aria-current]{color:var(--yellow);border-bottom-color:var(--yellow)}
+#theme-toggle{background:none;border:1px solid #fff;border-radius:50%;font-size:1.2rem;cursor:pointer;width:2.5rem;height:2.5rem}
+
+/* hero */
+.hero{min-height:70vh;display:grid;place-items:center;text-align:center;background:linear-gradient(rgba(60,20,5,.55),rgba(60,20,5,.55)),url('https://loremflickr.com/1600/900/african,food') center/cover}
+.overlay{color:#fff;padding:2rem;max-width:40rem}
+.overlay h1{color:var(--yellow);font-size:clamp(2.5rem,8vw,4.5rem);margin:0}
+
+/* components */
+mark{background:var(--yellow);color:#3b2417;padding:0 .3rem;border-radius:.25rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.5rem}
+.card{background:var(--card);border-radius:1rem;box-shadow:var(--shadow);overflow:hidden;margin:0;animation:fade .6s ease both}
+.pad{padding:1.5rem}
+figcaption{padding:1rem 1.25rem 1.5rem}
+.btn,button[type=submit]{display:inline-block;background:var(--red);color:#fff;border:0;padding:.6rem 1.2rem;border-radius:2rem;text-decoration:none;font:inherit;font-weight:600;cursor:pointer;transition:.2s}
+.btn:hover,button[type=submit]:hover{background:var(--yellow);color:#3b2417}
+.pills{display:flex;flex-wrap:wrap;gap:1rem;list-style:none;padding:0}
+.pills a{display:block;padding:.7rem 1.5rem;background:var(--yellow);color:#3b2417;border-radius:2rem;text-decoration:none;font-weight:600}
+.stack{display:grid;gap:1.5rem}
+.video{position:relative;aspect-ratio:16/9;margin:1rem 0}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:.5rem}
+.mission{border-left:.4rem solid var(--yellow);padding:.5rem 1.5rem;font-size:1.25rem;font-style:italic;margin:1.5rem 0}
+
+/* recipes */
+.recipes{display:grid;gap:2rem}
+.filters{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 2rem}
+.filter-btn,.fav-btn{background:var(--card);color:var(--text);border:2px solid var(--red);border-radius:2rem;padding:.4rem 1rem;font:inherit;cursor:pointer}
+.filter-btn.active,.fav-btn.active{background:var(--red);color:#fff}
+.hidden{display:none!important}
+details{background:rgba(232,163,23,.15);padding:.75rem 1rem;border-radius:.5rem;margin:1rem 0}
+summary{cursor:pointer;font-weight:700}
+table{border-collapse:collapse;width:100%}
+th,td{border:1px solid var(--brown);padding:.5rem;text-align:center}
+th{background:var(--brown);color:#fff}
+.servings{width:4.5rem;padding:.3rem}
+
+/* forms */
+form{display:grid;gap:.5rem}
+input,textarea,select{width:100%;padding:.7rem;border:2px solid var(--brown);border-radius:.5rem;font:inherit;background:var(--card);color:var(--text);transition:.2s}
+input:focus,textarea:focus{outline:none;border-color:var(--yellow);box-shadow:0 0 0 .25rem rgba(232,163,23,.45)}
+.error{color:var(--red);font-weight:700;min-height:1.5rem}
+
+/* footer */
+.site-footer{background:var(--brown);color:#fff;text-align:center;padding:2rem 1rem}
+.newsletter{max-width:28rem;margin:1rem auto 0}
+.newsletter label{font-weight:700}
+
+@keyframes fade{from{opacity:0;transform:translateY(1rem)}to{opacity:1;transform:none}}
+@media(max-width:40rem){.site-header{flex-direction:column}}

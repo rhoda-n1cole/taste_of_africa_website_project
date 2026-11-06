@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Tastes of Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">🌍 Tastes of Africa</a>
+  <nav aria-label="Main navigation"><ul>
+    <li><a href="index.html" aria-current="page">Home</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="regions.html">Regions</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></nav>
+  <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="overlay">
+      <h1>Tastes of Africa</h1>
+      <p>Explore the <mark>spices</mark>, stories and flavours of a continent on a plate.</p>
+      <a class="btn" href="recipes.html">Explore recipes</a>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Welcome</h2>
+    <p>Watch an introduction to African food culture:</p>
+    <div class="video"><iframe class="yt" title="Introduction to African food culture" allowfullscreen loading="lazy"></iframe></div>
+  </section>
+
+  <section class="wrap">
+    <h2>Featured Dishes</h2>
+    <div class="grid">
+      <figure class="card">
+        <a href="recipes.html#jollof"><img src="https://loremflickr.com/600/400/jollof,rice" alt="A plate of smoky Jollof rice"></a>
+        <figcaption><h3>Jollof Rice</h3><p>A <mark>tomato-based</mark> one-pot rice served at celebrations across West Africa.</p><a class="btn" href="recipes.html#jollof">View recipe</a></figcaption>
+      </figure>
+      <figure class="card">
+        <a href="recipes.html#tagine"><img src="https://loremflickr.com/600/400/tagine,morocco" alt="A Moroccan chicken tagine in a clay pot"></a>
+        <figcaption><h3>Chicken Tagine</h3><p>A slow-cooked Moroccan stew perfumed with <mark>saffron</mark> and preserved lemon.</p><a class="btn" href="recipes.html#tagine">View recipe</a></figcaption>
+      </figure>
+      <figure class="card">
+        <a href="recipes.html#injera"><img src="https://loremflickr.com/600/400/injera,ethiopian" alt="Injera flatbread served with Ethiopian stews"></a>
+        <figcaption><h3>Injera with Doro Wat</h3><p>A spongy <mark>teff</mark> flatbread served with a spicy Ethiopian chicken stew.</p><a class="btn" href="recipes.html#injera">View recipe</a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Explore by Region</h2>
+    <ul class="pills">
+      <li><a href="regions.html#west-africa">West Africa</a></li>
+      <li><a href="regions.html#north-africa">North Africa</a></li>
+      <li><a href="regions.html#east-africa">East Africa</a></li>
+    </ul>
+  </section>
+
+  <section class="wrap">
+    <h2>Latest Food Trends</h2>
+    <div class="grid">
+      <article class="card pad"><h3>Ancient grains return</h3><p>Chefs worldwide are rediscovering <mark>teff</mark>, fonio and sorghum.</p></article>
+      <article class="card pad"><h3>Plant-forward African cooking</h3><p>Cassava leaves and <mark>moringa</mark> are trending in healthy kitchens.</p></article>
+      <article class="card pad"><h3>Street food goes global</h3><p>Suya and chapati stands are popping up in major cities.</p></article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Tastes of Africa. Celebrating African food heritage.</p>
+  <form id="newsletter-form" class="newsletter">
+    <label for="news-email">Newsletter signup</label>
+    <input type="email" id="news-email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe</button>
+    <p id="news-msg" role="status"></p>
+  </form>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

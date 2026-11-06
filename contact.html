@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Tastes of Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">🌍 Tastes of Africa</a>
+  <nav aria-label="Main navigation"><ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="regions.html">Regions</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" aria-current="page">Contact</a></li>
+  </ul></nav>
+  <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main class="wrap narrow">
+  <h1>Contact Us</h1>
+  <form id="contact-form" novalidate>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="country">Country</label>
+    <input list="countries" id="country" name="country" placeholder="Start typing...">
+    <datalist id="countries">
+      <option value="Nigeria"><option value="Ghana"><option value="Morocco">
+      <option value="Ethiopia"><option value="Rwanda"><option value="Kenya">
+      <option value="South Africa"><option value="Egypt"><option value="Other">
+    </datalist>
+
+    <label for="message">Message (more than 20 characters)</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <p id="form-error" class="error" role="alert"></p>
+    <button type="submit">Send message</button>
+  </form>
+  <div id="confirmation" class="card pad hidden" role="status"></div>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Tastes of Africa. Celebrating African food heritage.</p>
+  <form id="newsletter-form" class="newsletter">
+    <label for="news-email">Newsletter signup</label>
+    <input type="email" id="news-email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe</button>
+    <p id="news-msg" role="status"></p>
+  </form>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

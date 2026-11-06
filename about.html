@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us | Tastes of Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">🌍 Tastes of Africa</a>
+  <nav aria-label="Main navigation"><ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="regions.html">Regions</a></li>
+    <li><a href="about.html" aria-current="page">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></nav>
+  <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main class="wrap narrow">
+  <h1>About Us</h1>
+  <blockquote class="mission">
+    <p>Our mission is to promote and preserve African food heritage by sharing recipes, stories and traditions with the world.</p>
+  </blockquote>
+  <h2>A brief history</h2>
+  <p>African cuisine grew from indigenous grains, roots and livestock, then absorbed influences from Arab, Indian, Portuguese and European trade. Through the diaspora, dishes like <mark>jollof</mark> and okra stews travelled to the Americas and shaped global food.</p>
+  <h2>Find us</h2>
+  <p>Visit Kimironko Market in Kigali, a busy hub of fresh produce.</p>
+  <div class="video"><iframe src="https://www.google.com/maps?q=Kimironko+Market+Kigali&output=embed" title="Map of Kimironko Market, Kigali" loading="lazy"></iframe></div>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Tastes of Africa. Celebrating African food heritage.</p>
+  <form id="newsletter-form" class="newsletter">
+    <label for="news-email">Newsletter signup</label>
+    <input type="email" id="news-email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe</button>
+    <p id="news-msg" role="status"></p>
+  </form>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

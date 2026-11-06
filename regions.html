@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Culinary Regions | Tastes of Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">🌍 Tastes of Africa</a>
+  <nav aria-label="Main navigation"><ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="regions.html" aria-current="page">Regions</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></nav>
+  <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main class="wrap">
+  <h1>Culinary Regions</h1>
+  <div class="stack">
+
+    <article class="card pad" id="west-africa">
+      <h2>West Africa</h2>
+      <p>Rice, yams, plantain and peppers define the table. Dishes are bold, spicy and communal.</p>
+      <h3>Staples &amp; spices</h3>
+      <p><mark>Scotch bonnet</mark>, <mark>palm oil</mark>, grains of selim.</p>
+      <h3>Cooking techniques</h3>
+      <p>Stewing, grilling (suya) and one-pot rice cooking.</p>
+      <h3>Example dishes</h3>
+      <ul><li><a href="recipes.html#jollof">Jollof Rice</a></li></ul>
+    </article>
+
+    <article class="card pad" id="north-africa">
+      <h2>North Africa</h2>
+      <p>Couscous, olives, dried fruit and fragrant spice blends shape this Mediterranean-influenced cuisine.</p>
+      <h3>Staples &amp; spices</h3>
+      <p><mark>Saffron</mark>, cumin and <mark>ras el hanout</mark>.</p>
+      <h3>Cooking techniques</h3>
+      <p>Slow cooking in clay tagines and steaming couscous.</p>
+      <h3>Example dishes</h3>
+      <ul><li><a href="recipes.html#tagine">Chicken Tagine</a></li></ul>
+    </article>
+
+    <article class="card pad" id="east-africa">
+      <h2>East Africa</h2>
+      <p>Flatbreads, stews, maize porridge and cassava sit alongside Indian Ocean spice-trade influences.</p>
+      <h3>Staples &amp; spices</h3>
+      <p><mark>Berbere</mark>, cardamom and cloves.</p>
+      <h3>Cooking techniques</h3>
+      <p>Fermenting (injera), simmering stews and grilling (nyama choma).</p>
+      <h3>Example dishes</h3>
+      <ul><li><a href="recipes.html#injera">Injera with Doro Wat</a></li></ul>
+    </article>
+
+  </div>
+  <h2>Video: A taste of the continent</h2>
+  <div class="video"><iframe class="yt" title="African regional cuisine" allowfullscreen loading="lazy"></iframe></div>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Tastes of Africa. Celebrating African food heritage.</p>
+  <form id="newsletter-form" class="newsletter">
+    <label for="news-email">Newsletter signup</label>
+    <input type="email" id="news-email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe</button>
+    <p id="news-msg" role="status"></p>
+  </form>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
